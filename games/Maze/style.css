@@ -1,0 +1,61 @@
+body {
+    min-width: 90%;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 18px;
+    background-image: url("img/background.jpg");
+}
+
+div {
+    position: relative;
+    width: 250px;
+    padding: 0.5em 1em;
+    margin: 1px 10px 1px;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+div:before,
+div:after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+}
+
+div p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+span {
+    font-family: cursive;
+    font-size: 16px;
+}
+
+#canvas {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 30px;
+}
+
+#myDiv {
+    margin-bottom: 20px;
+    width: 90%;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    color: #D9470D;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 150%;
+    text-shadow: #000000 0px 1px 1px;
+}

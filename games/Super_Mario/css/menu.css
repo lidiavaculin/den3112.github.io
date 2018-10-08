@@ -1,0 +1,111 @@
+/*
+    Стили для меню    
+*/
+@font-face {
+    font-family: 'SMB';
+    src: local('Super Mario.'), url('../Content/fonts/Super Mario.ttf') format('truetype');
+    font-style: normal;
+}
+
+a:link, a:visited {
+    color: #f00;
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: 0;
+}
+
+#menu {
+    height: 480px;
+    width: 640px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -238px;
+    margin-left: -318px;
+    font-family: 'Comic Sans MS', 'Georgia', 'Arial';
+    color: #000;
+    font-size: 12px;
+    overflow: hidden;
+    background: url(../Content/start_screen.png);
+    z-index: 1001;
+}
+
+#newgame {
+    position: absolute;
+    width: 150px;
+    height: 38px;
+    top: 35%;
+    left: 35%;
+    line-height: 38px;
+}
+
+#controls {
+    width: 100px;
+    height: 25px;
+    top: 50%;
+    left: 39%;
+    position: absolute;
+}
+
+#windows {
+    width: 48px;
+    height: 48px;
+    top: 89%;
+    left: 2%;
+    position: absolute;
+    z-index: 1001;
+}
+
+#android {
+    width: 48px;
+    height: 48px;
+    top: 89%;
+    left: 11%;
+    position: absolute;
+    z-index: 1001;
+}
+
+#youtube {
+    width: 48px;
+    height: 48px;
+    top: 89%;
+    left: 91%;
+    position: absolute;
+    z-index: 1001;
+}
+#menu_buttons div, #open_button {
+    background: #f00;
+    background: -webkit-linear-gradient(top, #f00, #f19736, #f00);
+    background: -moz-linear-gradient(top, #f00, #f19736, #f00);
+    background: -o-linear-gradient(top, #f00, #f19736, #f00);
+    background: linear-gradient(top, #f00, #f19736, #f00);
+    padding: 5px 10px;
+    margin: 0 10px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    border: 2px #000 solid;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 24px;
+    box-shadow: 1px 1px 5px #333;
+    font-family: 'SMB';
+}
+
+#open_button {
+    float: none;
+}
+
+    #newgame:hover, #edit:hover, #controls:hover, #open_button:hover {
+        box-shadow: 3px 3px 5px #000;
+        cursor: pointer;
+    }

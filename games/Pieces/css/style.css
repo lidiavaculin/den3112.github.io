@@ -1,0 +1,45 @@
+body {
+    background-image: url(../img/background.jpg);
+}
+
+#board {
+    width: 900px;
+    margin: 30px auto;
+    background-image: url(../img/border.jpg);
+}
+
+#myCanvas {
+    margin: 50px;
+}
+
+.styledDiv {
+    background-color: #e6994c;
+    border-color: #704010;
+    border-width: 10px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+#log {
+    width: 700px;
+    height: 400px;
+    margin: 30px auto;
+}
+
+#turn {
+    width: 500px;
+    height: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+}
+
+.column {
+    width: 135px;
+/*    height: 300px;*/
+    float: left;
+    padding: 5px;
+}

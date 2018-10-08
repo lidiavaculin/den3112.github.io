@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="all" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="keywords" content="Super, Mario, HTML5, JavaScript, jQuery" />
+    <meta name="description" content="Super Mario HTML5" />
+    <title>Super Mario HTML5</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/controlls.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/menu.css" type="text/css" media="screen, projection" />
+    <link rel="shortcut icon" type="image/x-icon" href="Content/icon.ico" />
+
+</head>
+
+<body>
+    <div id="game">
+        <div id="world"></div>
+        <div id="coinNumber" class="gauge">
+            0
+        </div>
+        <div id="coin" class="gaugeSprite">
+        </div>
+        <div id="liveNumber" class="gauge">
+            0
+        </div>
+        <div id="live" class="gaugeSprite">
+        </div>
+    </div>
+
+    <div id="menu">
+        <div id="menu_buttons">
+            <div id="newgame">S T A R T</div>
+            <div id="controls">Help</div>
+        </div>
+        <div id="downloads">
+            <div id="windows">
+                <a href="downloads/windows.exe">
+                    <img src="Content/windows_8.png" /></a>
+            </div>
+            <div id="android">
+                <a href="downloads/android.apk">
+                    <img src="Content/android.png" /></a>
+            </div>
+            <div id="youtube">
+                <a href="http://www.youtube.com/watch?v=Xlz9w2o8qqY&feature=youtu.be">
+                    <img src="Content/youtube.png" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="controllpage">
+
+        <div id="exit_controllpage">X</div>
+
+        <div id="rightarrow">
+            <img src="Content/arrow.png" width="50" height="30" alt="" />
+        </div>
+        <div id="leftarrow">
+            <img src="Content/arrow.png" width="50" height="30" alt="" />
+        </div>
+        <div id="uparrow">
+            <img src="Content/arrow.png" width="50" height="30" alt="" />
+        </div>
+        <div id="downarrow">
+            <img src="Content/arrow.png" width="50" height="30" alt="" />
+        </div>
+
+        <div id="texts">
+            <div id="rightarrowtext" class="text">: right</div>
+            <div id="leftarrowtext" class="text">: left</div>
+            <div id="uparrowtext" class="text">: up</div>
+            <div id="downarrowtext" class="text">: down</div>
+            <div id="Strgtext" class="text">: sprinter + fire</div>
+        </div>
+
+        <div id="Strg">Ctrl</div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script type="text/javascript" src="Scripts/jQuery.js"><\/script>')
+
+    </script>
+    <script type="text/javascript" src="Scripts/testlevels.js"></script>
+    <script type="text/javascript" src="Scripts/oop.js"></script>
+    <script type="text/javascript" src="Scripts/keys.js"></script>
+    <script type="text/javascript" src="Scripts/constants.js"></script>
+</body>
+
+</html>

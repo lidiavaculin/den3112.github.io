@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maze</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="myDiv">
+        <marquee id="myText">Поиск в лабиринте, помоги квадрату найти выход</marquee>
+    </div>
+    <div id="timer"></div>
+    <br>
+    <div class="start">Шагов: <span id="step">0</span>
+        <br> Пройдено уровней: <span id="complete">0</span></div>
+    <canvas id="canvas" style="background:#eeeeee"></canvas>
+    <video id="myAudio" src="audio/audio.mp3" autoplay="autoplay" loop></video>
+
+    <div>Выберите уровень сложности лабиринта:<br />
+        <input type="radio" name="browser" value="easy" onchange='mapGen("#canvas", 15, random, 0, 0)'> Легко
+        <br />
+        <input type="radio" name="browser" value="normal" checked onchange='mapGen("#canvas", 20, random, 0, 0)'> Средний
+        <br />
+        <input type="radio" name="browser" value="hard" onchange='mapGen("#canvas", 30, random+5, 0, 0)'> Сложно
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
