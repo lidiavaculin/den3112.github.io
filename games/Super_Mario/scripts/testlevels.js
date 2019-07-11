@@ -3,13 +3,12 @@
 */
 
 var definedLevels = [
-{
-    width: 200,
-    height: 15,
-    id: 0,
-    background: 1,
-    data:
-	[
+    {
+        width: 200,
+        height: 15,
+        id: 0,
+        background: 1,
+        data: [
     ['', '', '', '', '', '', '', '', '', '', '', '', '', 'grass_top', 'soil'],
 	['', '', '', '', '', '', '', '', '', '', '', '', 'mario', 'grass_top', 'soil'],
 	['', '', '', '', '', '', '', '', '', '', '', '', '', 'grass_top', 'soil'],
@@ -212,13 +211,12 @@ var definedLevels = [
 	['', '', '', '', '', '', '', '', '', '', '', '', '', 'grass_top', 'soil'],
 	]
 },
-{
-    width: 220,
-    height: 15,
-    id: 1,
-    background: 1,
-    data:
-	[
+    {
+        width: 220,
+        height: 15,
+        id: 1,
+        background: 1,
+        data: [
 	['', '', '', '', '', '', '', '', '', '', '', '', '', 'grass_top', 'planted_soil_middle'],
 	['', '', '', '', '', '', '', '', '', '', '', '', '', 'grass_top', 'planted_soil_middle'],
 	['', '', '', '', '', '', '', '', '', '', '', '', 'mario', 'grass_top', 'planted_soil_right'],

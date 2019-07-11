@@ -14,7 +14,10 @@ var Base = Class.extend({
         this.y = y;
     },
     getPosition: function () {
-        return { x: this.x, y: this.y };
+        return {
+            x: this.x,
+            y: this.y
+        };
     },
     setImage: function (img, x, y) {
         this.image = {
@@ -28,7 +31,10 @@ var Base = Class.extend({
         this.height = height;
     },
     getSize: function () {
-        return { width: this.width, height: this.height };
+        return {
+            width: this.width,
+            height: this.height
+        };
     },
     setupFrames: function (fps, frames, rewind, id) {
         if (id) {
@@ -132,7 +138,9 @@ var Level = Base.extend({
         this.start();
     },
     load: function (level) {
-        $('#gameover').css({ 'visibility': 'hidden' });
+        $('#gameover').css({
+            'visibility': 'hidden'
+        });
         if (this.active) {
             if (this.loop)
                 this.pause();
@@ -161,7 +169,7 @@ var Level = Base.extend({
 
             for (var j = 0, height = col.length; j < height; j++) {
                 if (reflection[col[j]])
-                    new (reflection[col[j]])(i * 32, (height - j - 1) * 32, this);
+                    new(reflection[col[j]])(i * 32, (height - j - 1) * 32, this);
             }
         }
     },
@@ -232,7 +240,9 @@ var Level = Base.extend({
             return;
         }
 
-        var i = 0, j = 0, figure, opponent;
+        var i = 0,
+            j = 0,
+            figure, opponent;
 
         for (i = this.figures.length; i--;) {
             figure = this.figures[i];
@@ -364,7 +374,10 @@ var Figure = Base.extend({
             this.die();
     },
     getGridPosition: function (x, y) {
-        return { i: this.i, j: this.j };
+        return {
+            i: this.i,
+            j: this.j
+        };
     },
     setVelocity: function (vx, vy) {
         this.vx = vx;
@@ -376,7 +389,10 @@ var Figure = Base.extend({
             this.direction = directions.left;
     },
     getVelocity: function () {
-        return { vx: this.vx, vy: this.vy };
+        return {
+            vx: this.vx,
+            vy: this.vy
+        };
     },
     hit: function (opponent) {
 
@@ -424,7 +440,8 @@ var Figure = Base.extend({
         var js = Math.ceil(this.level.getGridHeight() - s - (y + 31) / 32);
         var je = this.j;
 
-        var d = 0, b = ground_blocking.none;
+        var d = 0,
+            b = ground_blocking.none;
         var onground = false;
         var t = Math.floor((x + 16 + vx) / 32);
 
@@ -854,7 +871,9 @@ var Item = Matter.extend({
     },
     playFrame: function () {
         if (this.isBouncing) {
-            this.view.css({ 'bottom': (this.bounceDir > 0 ? '+' : '-') + '=' + this.bounceStep + 'px' });
+            this.view.css({
+                'bottom': (this.bounceDir > 0 ? '+' : '-') + '=' + this.bounceStep + 'px'
+            });
             this.bounceCount += this.bounceDir;
 
             if (this.bounceCount === this.bounceFrames)
@@ -902,15 +921,19 @@ var CoinBoxCoin = Coin.extend({
         this.frames = Math.floor(150 / constants.interval);
         this.step = Math.ceil(30 / this.frames);
     },
-    remove: function () { },
-    addToGrid: function () { },
-    addToLevel: function () { },
+    remove: function () {},
+    addToGrid: function () {},
+    addToLevel: function () {},
     activate: function (from) {
         this._super(from);
-        this.view.show().css({ 'bottom': '+=8px' });
+        this.view.show().css({
+            'bottom': '+=8px'
+        });
     },
     act: function () {
-        this.view.css({ 'bottom': '+=' + this.step + 'px' });
+        this.view.css({
+            'bottom': '+=' + this.step + 'px'
+        });
         this.count++;
         return (this.count === this.frames);
     },
@@ -1169,12 +1192,48 @@ var Hero = Figure.extend({
 var Mario = Hero.extend({
     init: function (x, y, level) {
         this.standSprites = [
-			[[{ x: 0, y: 81 }, { x: 481, y: 83 }], [{ x: 81, y: 0 }, { x: 561, y: 83 }]],
-			[[{ x: 0, y: 162 }, { x: 481, y: 247 }], [{ x: 81, y: 243 }, { x: 561, y: 247 }]]
+			[[{
+                x: 0,
+                y: 81
+            }, {
+                x: 481,
+                y: 83
+            }], [{
+                x: 81,
+                y: 0
+            }, {
+                x: 561,
+                y: 83
+            }]],
+			[[{
+                x: 0,
+                y: 162
+            }, {
+                x: 481,
+                y: 247
+            }], [{
+                x: 81,
+                y: 243
+            }, {
+                x: 561,
+                y: 247
+            }]]
         ];
         this.crouchSprites = [
-			[{ x: 241, y: 0 }, { x: 161, y: 0 }],
-			[{ x: 241, y: 162 }, { x: 241, y: 243 }]
+			[{
+                x: 241,
+                y: 0
+            }, {
+                x: 161,
+                y: 0
+            }],
+			[{
+                x: 241,
+                y: 162
+            }, {
+                x: 241,
+                y: 243
+            }]
         ];
         this.deadly = 0;
         this.invulnerable = 0;
@@ -1373,7 +1432,9 @@ var Mario = Hero.extend({
         if (this.deathEndWait)
             return --this.deathEndWait;
 
-        this.view.css({ 'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + (this.deathDir > 0 ? this.deathStepUp : this.deathStepDown) + 'px' });
+        this.view.css({
+            'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + (this.deathDir > 0 ? this.deathStepUp : this.deathStepDown) + 'px'
+        });
         this.deathCount += this.deathDir;
 
         if (this.deathCount === this.deathFrames)
@@ -1409,7 +1470,9 @@ var Mario = Hero.extend({
                 'color': 'white',
                 'visibility': 'visible'
             }).html('<br><br><br>Game Over');
-            setTimeout(function () { location.reload() }, 1000);
+            setTimeout(function () {
+                location.reload()
+            }, 1000);
         }
     },
     die: function () {
@@ -1530,7 +1593,9 @@ var Gumpa = Enemy.extend({
         if (this.death_mode === death_modes.normal)
             return --this.deathCount;
 
-        this.view.css({ 'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + this.deathStep + 'px' });
+        this.view.css({
+            'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + this.deathStep + 'px'
+        });
         this.deathCount += this.deathDir;
 
         if (this.deathCount === this.deathFrames)
@@ -1630,8 +1695,20 @@ var TurtleShell = Enemy.extend({
 var GreenTurtle = Enemy.extend({
     init: function (x, y, level) {
         this.walkSprites = [
-			[{ x: 34, y: 382 }, { x: 0, y: 437 }],
-			[{ x: 34, y: 266 }, { x: 0, y: 325 }]
+			[{
+                x: 34,
+                y: 382
+            }, {
+                x: 0,
+                y: 437
+            }],
+			[{
+                x: 34,
+                y: 266
+            }, {
+                x: 0,
+                y: 325
+            }]
         ];
         this._super(x, y, level);
         this.wait = 0;
@@ -1686,7 +1763,9 @@ var GreenTurtle = Enemy.extend({
         if (this.deathMode === death_modes.normal)
             return --this.deathFrames;
 
-        this.view.css({ 'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + (this.deathDir > 0 ? this.deathStepUp : this.deathStepDown) + 'px' });
+        this.view.css({
+            'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + (this.deathDir > 0 ? this.deathStepUp : this.deathStepDown) + 'px'
+        });
         this.deathCount += this.deathDir;
 
         if (this.deathCount === this.deathFrames)
@@ -1743,7 +1822,9 @@ var SpikedTurtle = Enemy.extend({
         }
     },
     death: function () {
-        this.view.css({ 'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + (this.deathDir > 0 ? this.deathStepUp : this.deathStepDown) + 'px' });
+        this.view.css({
+            'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + (this.deathDir > 0 ? this.deathStepUp : this.deathStepDown) + 'px'
+        });
         this.deathCount += this.deathDir;
 
         if (this.deathCount === this.deathFrames)
@@ -1818,7 +1899,9 @@ var StaticPlant = Plant.extend({
         this.setImage(images.enemies, 68, 3);
     },
     death: function () {
-        this.view.css({ 'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + (this.deathDir > 0 ? this.deathStepUp : this.deathStepDown) + 'px' });
+        this.view.css({
+            'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + (this.deathDir > 0 ? this.deathStepUp : this.deathStepDown) + 'px'
+        });
         this.deathCount += this.deathDir;
 
         if (this.deathCount === this.deathFrames)
@@ -1893,7 +1976,9 @@ var PipePlant = Plant.extend({
             return --this.deathFramesExtended;
         }
 
-        this.view.css({ 'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + this.deathStep + 'px' });
+        this.view.css({
+            'bottom': (this.deathDir > 0 ? '+' : '-') + '=' + this.deathStep + 'px'
+        });
         this.deathCount += this.deathDir;
 
         if (this.deathCount === this.deathFrames)

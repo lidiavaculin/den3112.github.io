@@ -1,8 +1,11 @@
 var reflection = {};
 (function () {
-    var initializing = false, fnTest = /xyz/.test(function () { xyz; }) ? /\b_super\b/ : /.*/;
+    var initializing = false,
+        fnTest = /xyz/.test(function () {
+            xyz;
+        }) ? /\b_super\b/ : /.*/;
 
-    this.Class = function () { };
+    this.Class = function () {};
 
     Class.extend = function (prop, ref_name) {
         if (ref_name)
