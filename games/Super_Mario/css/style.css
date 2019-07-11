@@ -3,7 +3,7 @@
 */
 @font-face {
     font-family: 'SMB';
-    src: local('Super Mario.'), url('../Content/fonts/Super Mario.ttf') format('truetype');
+    src: local('Super Mario.'), url('../content/fonts/Super Mario.ttf') format('truetype');
     font-style: normal;
 }
 
@@ -12,7 +12,7 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background: url('../Content/background.png'), no-repeat;
+    background: url('../content/background.png'), no-repeat;
     background-size: cover;
     min-width: 640px;
     min-height: 480px;
@@ -74,7 +74,7 @@ html, body {
 #coin {
     height: 32px;
     width: 32px;
-    background-image: url(../Content/mario-objects.png);
+    background-image: url(../content/mario-objects.png);
     background-position: 0 0;
     top: 15px;
     left: 70px;
@@ -83,7 +83,7 @@ html, body {
 #live {
     height: 40px;
     width: 40px;
-    background-image: url(../Content/mario-sprites.png);
+    background-image: url(../content/mario-sprites.png);
     background-position: 0 -430px;
     top: 12px;
     right: 8px;

@@ -3,7 +3,7 @@
 */
 @font-face {
     font-family: 'SMB';
-    src: local('Super Mario.'), url('../Content/fonts/Super Mario.ttf') format('truetype');
+    src: local('Super Mario.'), url('../content/fonts/Super Mario.ttf') format('truetype');
     font-style: normal;
 }
 
@@ -32,7 +32,7 @@ img {
     color: #000;
     font-size: 12px;
     overflow: hidden;
-    background: url(../Content/start_screen.png);
+    background: url(../content/start_screen.png);
     z-index: 1001;
 }
 
