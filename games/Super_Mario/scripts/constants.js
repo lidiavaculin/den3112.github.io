@@ -2,7 +2,7 @@
     Константы    
 */
 
-var BASEPATH = 'Content/';
+var BASEPATH = 'content/';
 var DIV = '<div />';
 var CLS_FIGURE = 'figure';
 var CLS_MATTER = 'matter';

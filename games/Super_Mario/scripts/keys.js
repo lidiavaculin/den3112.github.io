@@ -54,7 +54,7 @@ var keys = {
 document.getElementById('newgame').onclick = function () {
     function load(url) {
         var e = document.createElement("script");
-        e.src = "Scripts/main.js";
+        e.src = "scripts/main.js";
         e.type = "text/javascript";
         document.getElementsByTagName("head")[0].appendChild(e);
     }
